@@ -171,6 +171,10 @@
     <None Include="Includes\Maths\Vector2.inl" />
     <None Include="Includes\Maths\Vector3.inl" />
     <None Include="Includes\Maths\Vector4.inl" />
+    <None Include="Resources\Shaders\Blur.fs" />
+    <None Include="Resources\Shaders\ChromaticAberration.fs" />
+    <None Include="Resources\Shaders\GaussianBlur.fs" />
+    <None Include="Resources\Shaders\NonBlackPixels.fs" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
