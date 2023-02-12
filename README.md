@@ -1,23 +1,15 @@
+<div align="center">
+
 # Cannon Warfare
+</div>
 
-### General Information
-
-<br>
-The goal main was to create a realistic simulation of a 2D cannon. 
-<br>
-The cannonballs had to be subject to drag and should show their trajectories. 
-<br>
-A cannonball's trajectory also had to be predicted, with the air time, the maximum height and the landing distance.
-<br><br>
+**Cannon Warfare is a scientific project made within two weeks based on projectiles real time trajectory simulations.** <br/>
+**This project displays 2D cannonball's trajectory depending on many variables with many statistics shown.**<br/>
 
 ## Preview
-
 <img src="Showcase/idle.gif" style="width:800px;"/>
 
-
 <img src="Showcase/shooting.gif" style="width:800px;"/>
-
-<br>
 
 ## Features
 
@@ -33,33 +25,23 @@ A cannonball's trajectory also had to be predicted, with the air time, the maxim
         See [this link](https://www.physagreg.fr/mecanique-12-chute-frottements.php) for more info. <br>
         See ```CannonBall.cpp > ComputeDrag()```.
 
-<br>
-
 - Cannonball trajectory prediction with near-perfect accuracy (see ```Cannon.cpp > UpdateTrajectory()```)
     - Without drag, this is done instantly by solving the cannonball's movement equation to get its landing position and velocity, then the trajectory is drawn as a bezier curve.
     - With drag, the cannonball's movement equation becomes very hard to solve without iteration. Our solutions were either to use euler's method, or to simulate a cannonball and save its position at regular intervals. We went for the second one since both use iteration and euler's method would grant similar results in similar time frames so it felt like overkill.
-
-<br>
 
 - The cannonball's muzzle velocity is computed using the following formula: <br>
     <img src="Showcase/muzzleVelocity.png"/> <br>
     See <a href="https://www.arc.id.au/CannonBallistics.html">this link</a> for more info. <br>
     See ```Cannon.cpp > ComputeMuzzleVelocity()```.
 
-<br>
-
 - Cannon recoil is applied using the following formula: <br>
     <img src="Showcase/recoilVelocity.png"> <br>
     See [this link](https://www.omnicalculator.com/physics/recoil-energy) for more info. <br>
     See ```Cannon.cpp > ApplyRecoil()```.
 
-<br>
-
 - Cannonball collisions are applied using the following formula: <br>
     <img src="Showcase/collision.png"> <br>
     See ```CannonBall.cpp > CheckCollisions()```.
-
-<br>
 
 - Tweakable variables:
     - Powder charge
@@ -69,8 +51,6 @@ A cannonball's trajectory also had to be predicted, with the air time, the maxim
     - Cannon height
     - Cannon rotation
 
-<br>
-
 - Toggleable parameters:
     - Apply recoil
     - Apply drag
@@ -78,3 +58,7 @@ A cannonball's trajectory also had to be predicted, with the air time, the maxim
     - Show predicted trajectory
     - Show predicted measurements
     - Show cannonball trajectories
+    
+    # Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.<br/>
+Please make sure to update tests as appropriate.<br/>
